@@ -8,9 +8,7 @@ baseurl: '/'
 author:
   name: 'Nithin Krishna'
   email: nithin.krishna@outlook.com
-
   github_username:  nitkna
-  linkedin_username:  joshgerdes
 
 defaults:
   -
