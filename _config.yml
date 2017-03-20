@@ -1,13 +1,6 @@
 # Site settings
-<<<<<<< HEAD
 title: Nithin Krishna
-description: 'My Simple BLog'
-#url: 'http://joshgerdes.com/jekyll-uno'
-=======
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno'
->>>>>>> b9df394d7e0583e12c50a717e52adad57f4563cd
+description: 'My Simple Blog'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
