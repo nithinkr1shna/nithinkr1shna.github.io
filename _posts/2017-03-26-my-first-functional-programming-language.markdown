@@ -23,7 +23,7 @@ For example: The factorial of a number,
  factorial(x); // function call
 ```
 
-Then the function definition is like this.
+Then the function definition will be.
 
 ``` c
  int factorial(int x){
@@ -46,8 +46,10 @@ Then the function definition is like this.
 
 To execute a Erlang program we have the save this code in a file, say fact.erl(.erl for erlang). Next in the file we have to specify the name of the module, and should write a export list. For this example, this would be like,
 
+`` erlang
 -module(fact). 
 -export([fact/1]).
+```
  
 module(fact) says that the name of this module is fact which should be same as that of the file name. Export list export([fact/1]) exports the fuction so that it can be called outside the module. In fact/1, fact is the name of the function and 1 is the arity (no of arguments). If there are more than one function to be exported then the list would be,
 
