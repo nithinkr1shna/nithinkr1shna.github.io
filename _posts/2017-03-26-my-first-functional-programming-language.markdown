@@ -7,13 +7,15 @@ tags: [erlang]
 
 Hai, this is going to be my first post. I think I will start this blog by narrating the experience with my first functional programming Language. Erlang! So what is Erlang, for me it is a functional programming language. But wikipedia defines Erlang as 
 
+
 *"Erlang is a general-purpose concurrent, functional programming language, as well as a garbage-collected runtime system."*
+
 
 Now coming to Erlang.
 
 The last week I have attended a course in functional programming, a free course from [Futurelearn][futurelearn-site]. The course tutor was Simon Thompson, Professor of Logic and Computation/ Director of Innovation, University of kent. The course duration was for 3 weeks. 
 At first the concept was a little difficult for me but later on it becomes a lot more easier. One of the main difference I fond in Erlang is that there is no looping syntax as in c or other programming languages. For acheiving any looping we have to do recursion. 
-For example: The factorial of a number
+For example: The factorial of a number,
 
  In c:
 
