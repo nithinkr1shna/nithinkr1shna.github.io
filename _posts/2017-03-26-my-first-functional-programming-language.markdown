@@ -5,8 +5,10 @@ categories: [erlang]
 tags: [erlang]
 ---
 
-Hai, this is going to be my first post. I think i will start this blog by narrating the experience with my first functional programming Language. Erlang! 
-So what is Erlang, for me it is a functional programming language. But wikipedia defines Erlang as "Erlang is a general-purpose concurrent, functional programming language, as well as a garbage-collected runtime system."
+Hai, this is going to be my first post. I think I will start this blog by narrating the experience with my first functional programming Language. Erlang! So what is Erlang, for me it is a functional programming language. But wikipedia defines Erlang as 
+
+*"Erlang is a general-purpose concurrent, functional programming language, as well as a garbage-collected runtime system."*
+
 Now coming to Erlang.
 
 The last week I have attended a course in functional programming, a free course provided by www.futurelearn.com. The course tutor was Simon Thompson, Professor of Logic and Computation/ Director of Innovation, University of kent. The course duration was for 3 weeks. 
