@@ -46,16 +46,30 @@ Then the function definition will be.
 
 To execute a Erlang program we have the save this code in a file, say fact.erl(.erl for erlang). Next in the file we have to specify the name of the module, and should write a export list. For this example, this would be like,
 
-`` erlang
+``` erlang
 -module(fact). 
 -export([fact/1]).
 ```
  
 module(fact) says that the name of this module is fact which should be same as that of the file name. Export list export([fact/1]) exports the fuction so that it can be called outside the module. In fact/1, fact is the name of the function and 1 is the arity (no of arguments). If there are more than one function to be exported then the list would be,
 
+```
 -export([fn1/arity_of_fn1,fn2/arity_of_fn2,......]).
+```
 
 The dot after any expression means an end. Another important thing in Erlang is that the order of execution is sequential.
+
+To compile the code from the terminal:
+```
+c(fact).
+>>{ok,fact}
+```
+To call the function:
+
+```
+fact:fact(5).
+>>120
+```
 
 
 [futurelearn-site]: https://www.futurelearn.com
