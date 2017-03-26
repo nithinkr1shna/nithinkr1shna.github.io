@@ -11,7 +11,7 @@ Hai, this is going to be my first post. I think I will start this blog by narrat
 
 Now coming to Erlang.
 
-The last week I have attended a course in functional programming, a free course provided by www.futurelearn.com. The course tutor was Simon Thompson, Professor of Logic and Computation/ Director of Innovation, University of kent. The course duration was for 3 weeks. 
+The last week I have attended a course in functional programming, a free course from [Futurelearn][futurelearn-site]. The course tutor was Simon Thompson, Professor of Logic and Computation/ Director of Innovation, University of kent. The course duration was for 3 weeks. 
 At first the concept was a little difficult for me but later on it becomes a lot more easier. One of the main difference I fond in Erlang is that there is no looping syntax as in c or other programming languages. For acheiving any looping we have to do recursion. 
 For example: The factorial of a number
 
@@ -52,3 +52,6 @@ module(fact) says that the name of this module is fact which should be same as t
 -export([fn1/arity_of_fn1,fn2/arity_of_fn2,......]).
 
 The dot after any expression means an end. Another important thing in Erlang is that the order of execution is sequential.
+
+
+[futurelearn-site]: https://www.futurelearn.com
