@@ -43,6 +43,17 @@ Then the function definition will be.
  fact(X)->
    X*fact(X-1).
 ```
+Here we can see the recursion. This can be explained like, if we want to find the factorial of 0(fact(0)) it will return 1. Let me explain further, say we want to find the factorial of 5. Then this can be worked out like,
+```
+fact(5)->
+  5*fact(4)->
+   5*4*fact(3)->
+    5*4*3*fact(2)->
+	 5*4*3*2*fact(1)->
+	  5*4*3*2*1*fact(0)->
+	   5*4*3*2*1*1->
+	    120.
+```
 
 To execute a Erlang program we have the save this code in a file, say fact.erl(.erl for erlang). Next in the file we have to specify the name of the module, and should write a export list. For this example, this would be like,
 
