@@ -43,7 +43,7 @@ Then the function definition will be.
  fact(X)->
    X*fact(X-1).
 ```
-Here we can see the recursion. This can be explained like, if we want to find the factorial of (fact(5)) it will return 120. Let me explain further, say we want to find the factorial of 5. Then this can be worked out like,
+Here we can see the recursion. This can be explained like, if we want to find the factorial of  fact(5) it will return 120. Let me explain this further, say we want to find the factorial of 5. Then this can be worked out like,
 ```
 fact(5)->
   5*fact(4)->
