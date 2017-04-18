@@ -37,3 +37,43 @@ This creates a new process, we can get the process ID of the newly created proce
 ```erlang
 Pid = spawn(Module,Function, Arguments)
 ```
+we can also register names for a process. In general a single  module has one named process.
+
+```erlang
+register(foo, spawn(foo,init,[]))
+```
+Here we are creating a process and naming it as foo, which is the same name as the module(convention), init as function and empty arguments. By naming the process we can send messages to the process foo.
+
+Message to a process is send with the help of bang(!) symbol. An example is shown below
+
+```erlang
+
+-module(test).
+-export(loop/0).
+
+start()->
+   register(test,Pid=spawn(test,run,[]))),
+   {Pid,started},
+run()->
+   receive
+     stop-> {stopped};
+	 _Msg ->io:format("got ~s~n",[Msg]),
+	        run()
+   end.
+```
+ 
+In shell,
+
+```erlang
+
+1>c(test).
+{ok,test}
+2> test:start().
+{<0.65.0>,started}
+3> test ! hello.
+got hello
+hello
+4> test ! stop.
+{stopped}
+
+```
