@@ -5,8 +5,8 @@ categories:  [erlang]
 tags: [erlang]
 ---
 
-*"In computer science, concurrency is the decomposability property of a program, algorithm, or problem into order-independent or partially-ordered components or units
-."* -concurrency as defined by wikipedia.
+<center>*"In computer science, concurrency is the decomposability property of a program, algorithm, or problem into order-independent or partially-ordered components or units
+."* -concurrency as defined by wikipedia.</center>
 
 In Erlang concurrency is acheived by running processes independently, potentially running in parallel. In single core systems concurrent process time share, mediated by a Scheduler, in a round robin fashion. We have a 3 state-process model in Erlang, they are RUNNING, WAITING, RUNNABLE.
 
