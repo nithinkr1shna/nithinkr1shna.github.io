@@ -14,7 +14,7 @@ WAITING: A process in said to be in a WAITING state if it is in a receive statem
 RUNNABLE: A message is recieved or the timer of the process reaches zero, the process becomes RUNNABLE. This process id added to the end of the run queue. This run queue contains all the RUNNABLE processes.
 RUNNING: When a process is sheduled out of the run queue, the process at the front of the time queue starts running.
 
-<h1>DESCHEDULING:<h2>
+<h3>DESCHEDULING:</h3>
 
 Now the running process are descheduled after 1000 reduction steps, when 1000 reduction steps are reached the process is placed at the end of the run queue.The process can also get descheduled if it enters a waiting state with a empty mailbox and becomes waiting.
 
