@@ -49,7 +49,7 @@ Message to a process is send with the help of bang(!) symbol. An example is show
 ```erlang
 
 -module(test).
--export(loop/0).
+-export(start/0).
 
 start()->
    register(test,Pid=spawn(test,run,[]))),
@@ -60,7 +60,7 @@ run()->
 	 _Msg ->io:format("got ~s~n",[Msg]),
 	        run()
    end.
-```
+   ```
  
 In shell,
 
@@ -77,3 +77,6 @@ hello
 {stopped}
 
 ```
+Here we can see a receive end block in the run function, this statement is responsible for receiving the message send to that process. In the above example we created a thread, which receives a msg, displays it until stop atom is received. The concept of message well goes with mai box. In Erlang all the message send to a process will be placed into a process's mail box. The recieve statement is responsible for taking each of the messages in order as they are sent.
+
+Cont....
