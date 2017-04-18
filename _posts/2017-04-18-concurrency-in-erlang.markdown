@@ -1,5 +1,5 @@
 ---
-title:  "Concurrency in Erlang-Single Core Systems"
+title:  "Concurrency in Erlang"
 date:  "2017-04-18 16:43:13"
 categories:  [erlang]
 tags: [erlang]
@@ -19,6 +19,21 @@ RUNNING: When a process is sheduled out of the run queue, the process at the fro
 
 <h3>DESCHEDULING:</h3>
 
-The running process are descheduled after 1000 reduction steps, when 1000 reduction steps are reached the process is placed at the end of the run queue.The process can also get descheduled if it enters a waiting state with an empty mailbox and becomes waiting.
+The running process are descheduled after 1000 reduction steps, when 1000 reduction steps are reached the current running process is placed at the end of the run queue.The process can also get descheduled if it enters a waiting state with an empty mailbox and becomes waiting.
 
 All RUNNABLES are scheduled in Round Robin.
+
+What happens in multi-core systems? In multicore BEAM(Erlang virtual machine) will have multiple run queues(default: one per core). The processes are scheduled on the same core that spawned it. This doesn't mean that a process cant be served on a differnt core. With the help of a work-stealing algorithm, the processes can be migrated among cores. This ensures that no core time is wasted.
+
+
+<h3>Processes</h3>
+In Erlang, a process can be created with the help of a spawn primitive.
+
+'''
+spawn(Module, Function, Arguments)
+'''
+This creates a new process, we can get the process ID of the newly created process with
+
+'''
+Pid = spawn(Module,Function, Arguments)
+'''
