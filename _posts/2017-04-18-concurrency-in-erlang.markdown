@@ -29,11 +29,11 @@ What happens in multi-core systems? In multicore BEAM(Erlang virtual machine) wi
 <h3>Processes</h3>
 In Erlang, a process can be created with the help of a spawn primitive.
 
-'''
+```erlang
 spawn(Module, Function, Arguments)
-'''
+```
 This creates a new process, we can get the process ID of the newly created process with
 
-'''
+```erlang
 Pid = spawn(Module,Function, Arguments)
-'''
+```
