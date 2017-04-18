@@ -5,8 +5,7 @@ categories:  [erlang]
 tags: [erlang]
 ---
 
-<center>"In computer science, concurrency is the decomposability property of a program, algorithm, or problem into order-independent or partially-ordered components or units
-." -concurrency as defined by wikipedia.</center>
+*"In computer science, concurrency is the decomposability property of a program, algorithm, or problem into order-independent or partially-ordered components or units." -concurrency as defined by wikipedia.*
 
 
 
