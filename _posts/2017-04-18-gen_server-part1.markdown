@@ -15,8 +15,11 @@ gen_server:start_link({local, module},module,[],[]).
 We can start the generic server with the call start_link which generally takes four arguments. The First argument specifies the name(here name is locally registered, it can also be globally registered).The second argument is the Module in which the callback fuctions reside. Fourth function is for the callback function init/1. Fifth argument is the list of options. That is 
 
 Argument 1: Name of the generic server.
+
 Argument 2: Name of call back Module.
+
 Argument 3: Call back function init.
+
 Argument 4: List of Options.
 
 We can go through this concept with the help of a example. This example is of a Simple library(lib Module which has function interfaces) and corresponding generic server(gs Module). Here through the functional interfaces simple actions like view all the available books, lookup a book, checkout a book  are possible. 
