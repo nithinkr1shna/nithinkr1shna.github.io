@@ -13,7 +13,7 @@ For [Part 1][part-one-concurrency-in-erlang]
  
 In the multicore version of the BEAM Virtual Machine, each core has separate run queue. As said the BEAM will have run queues on each core, say if the system has 12 cores then there will be 12 run queues as default.The process are spawned on the same core where they are spawned. This processes can move between different cores with the help of a work-stealing algorithm.
 
-![multicore-beam]({{site.url}}/images/multicore-BEAM.jpg)
+![multicore-beam]({{site.url}}/assets/multicore-BEAM.jpg)
 By Work-Stealing the process can move between different cores. This means that for a long lived process, it can essentially move between different cores a number of times. This ensures that maximum no of cores are utilized.
 
 So it can be said that , if different process are to run on diferent cores this means that parallelism is obtained. 
