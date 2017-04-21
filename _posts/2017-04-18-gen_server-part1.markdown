@@ -74,7 +74,7 @@ init(_Args)->
 
 %%Hard coded
 
-all_books() -> [1,2,3].
+all_books() -> [mobydick, troy, tempest]].
 
 %%call_backs
 
