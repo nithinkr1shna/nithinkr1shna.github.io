@@ -30,7 +30,8 @@ With all this in mind lets move forward and allow me to write the challenges fac
 
   The first week of the course was mainly focussed on Erlang basics. One of the interesting aspect of Erlang that I came to know is the Pattern Matching. In Erlang variables are bind to values using pattern matching, uses single assignment. For example 
 
-```erlang
+{% highlight erlang %}
+
 Eshell V8.2  (abort with ^G)
 1> A=5.
 5
@@ -38,15 +39,15 @@ Eshell V8.2  (abort with ^G)
 5
 3> A=6.
 ** exception error: no match of right hand side value 6
+{% endhighlight %}
 
-```
 
   In the above example , A is bounded to value 5. If we try to bind it again(step 3) we will get an exception. Another thing to note is that the varibales must start with Capital letter otherwise it will become an atom. [Atoms][atoms_link_stackoverflow] are immutables, a literal ,a constant with a name.
 
   Functions:
     A simple function can be defined like this,
 
-```erlang
+{% highlight erlang %}
 
 -module(isZero).
 -export([is_zero/1]).
@@ -55,8 +56,7 @@ is_zero(0)->
  true;
 is_zero(X)->
  false.
- 
- ```
+ {% endhighlight %}
  
     The function is_zero checks whether a given value is zero or not. If first clause holds we will get true else false. The clauses are separated by a semi-colon(;) and the final clause have a period(.) at the end. We have a module name isZero and a export list. In export list is_zero/1 says that is_zero is a function which will take a single argument. Every  function should be exported to use outside the module. The function vcan be executed after compiling the file isZero.erl(same as the module name) as shown below. This function in action,
 
