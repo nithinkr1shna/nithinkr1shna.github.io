@@ -58,10 +58,10 @@ is_zero(X)->
  false.
  {% endhighlight %}
  
-    The function is_zero checks whether a given value is zero or not. If first clause holds we will get true else false. The clauses are separated by a semi-colon(;) and the final clause have a period(.) at the end. We have a module name isZero and a export list. In export list is_zero/1 says that is_zero is a function which will take a single argument. Every  function should be exported to use outside the module. The function vcan be executed after compiling the file isZero.erl(same as the module name) as shown below. This function in action,
+   The function is_zero checks whether a given value is zero or not. If first clause holds we will get true else false. The clauses are separated by a semi-colon(;) and the final clause have a period(.) at the end. We have a module name isZero and a export list. In export list is_zero/1 says that is_zero is a function which will take a single argument. Every  function should be exported to use outside the module. The function vcan be executed after compiling the file isZero.erl(same as the module name) as shown below. This function in action,
 
 
-```erlang
+{% highlight erlang %}
     
 1>c(isZero).  %% Compiling
 {ok, isZero}
@@ -69,9 +69,10 @@ is_zero(X)->
 true
 3> isZero:is_zero(3).
 false
-```
 
-    Recursion
+{% endhighlight %}
+
+Recursion
       Another different thing I saw in Erlang was that there is no explicit control structures like for , while loops etc. We have to attain looping with recursion alone. An example of factorial problem,
 
 ```erlang
