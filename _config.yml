@@ -22,7 +22,7 @@ defaults:
 destination: _site
 paginate: 10
 permalink: /:year/:title/
-markdown: kramdown
+markdown: redcarpet
 highlighter: rouge
 
 kramdown:
