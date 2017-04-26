@@ -316,7 +316,7 @@ Then this will be transformed to
 
 Supervisors are responsible for starting, stopping and monitioring its child processes. The basic idea is that the supervisor must keep its child process  alive by restarting them as necessary according to some strategy.[more][supervisor_behavior_erlang_doc_man_link]. 
 
-![supervision-tree](/assets/supervisor.jpg)
+![supervision-tree](/assets/supervisor.png)
 Erlang also supports [Exception][exception_handling] handling, throw and catch. Some of the errors that can occur include badmatch, badarith, undef, case clause etc.
 
 [image supervisor].
