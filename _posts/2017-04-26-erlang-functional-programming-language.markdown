@@ -283,7 +283,7 @@ Here we have spawned a process with the spawn primitive and send message {square
 
 ![process-mail-box](/assets/msg-passing-btwn-processes.png)
 
-If we send a message that wont match any pattern in the receive statement, those messages will reside in the mailbox which can be flushed with the help of [flush/0][flush_explained_in stackoverflow]. 
+If we send a message that wont match any pattern in the receive statement, those messages will reside in the mailbox which can be flushed with the help of [flush/0][flush_explained_in_stackoverflow]. 
 
 We were introduced with a the idea of a frequency server, where a server is responsible for alloting frequency to clients. So the basic functionality of the server is like allocating frequency to the clients and deallocating the alloacted frequencies. This is implemented with the help of a pair of lists {Free, Allocated}, and a function to allocate frequencies and a function to deallocate frequencies. Both of these function return new states.  We were able to implement this like,
 
