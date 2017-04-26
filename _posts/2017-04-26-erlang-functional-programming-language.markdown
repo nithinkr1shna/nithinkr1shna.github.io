@@ -5,7 +5,9 @@ categories: [erlang]
 tags: [erlang]
 ---
 
-Erlang is a general purpose, concurrent functional programming language.I have attended two online courses from futurelearn[futurelearn_link]. The first course mainly focussed on the basic of the Erlang Language and the second course was into concurrent programming in Erlang. The Erland Language is approx 30years old and getting popularity these days due to its wide usage in concurrent environment. The Erlang was orginally designed for improving the development in telephony applications, where thery have to handle a lot of active connections at the same time. Another problem that lead to the development of Erlang is the need for availability and fault tolerance. By 1988 Erlang proved that it was suitable for telephony applications. In 1992 the work for erlang virtual machine BEAM was started( earlier versions of erlang was implemented in Prolog which was found slower hence BEAM). In 1998 Ericsson announced they were able to acheive high availability of nine 9's using Erlang circuit switched digital telephone exhanges manufactured by Ericsson.
+Erlang is a general purpose, concurrent functional programming language.I have attended two online courses from futurelearn[futurelearn_link]. The first course mainly focussed on the basic of the Erlang Language and the second course was into concurrent programming in Erlang. The Erland Language is approx 30years old and getting popularity these days due to its wide usage in concurrent environment.
+
+The Erlang was orginally designed for improving the development in telephony applications, where thery have to handle a lot of active connections at the same time. Another problem that lead to the development of Erlang is the need for availability and fault tolerance. By 1988 Erlang proved that it was suitable for telephony applications. In 1992 the work for erlang virtual machine BEAM was started( earlier versions of erlang was implemented in Prolog which was found slower hence BEAM). In 1998 Ericsson announced they were able to acheive high availability of nine 9's using Erlang circuit switched digital telephone exhanges manufactured by Ericsson.
 
 
 
@@ -17,13 +19,15 @@ Erlang is a general purpose, concurrent functional programming language.I have a
 <li>Message passing is the only way for processes to interact.</li>
 <li>Process has unique names.</li>
 <li>If you know the nme of process you can send message to it.</li>
-</li>Processes share no resources.</li>
+<li>Processes share no resources.</li>
 <li>Error-handling is non-local.</li>
 <li>Processes do what they are supposed to do else they fail.</li>
 </ul>
 [from wiki][wikipedia_link_features]
 
+
 With all this in mind lets move forward and allow me to write the challenges faced and the new experiences gained during the said courses.
+
 
 <h3>Course 1: Basic Programming In Erlang.</h3>
 
@@ -221,13 +225,15 @@ The lists:map/2 function maps each element. The above example find the square of
   The lists:filter function filters out the odd numbers from the given List. [more on lists][erlang_doc_man_lists]
 
 
-And at the end of the course we had a assignment. The assignment was to implement rock-paper-scissors. 
+And at the end of the course we had an assignment. The assignment was to implement rock-paper-scissors. 
 
 
 <h3>Course 2: Concurrent Programming in Erlang</h3>
 <h4> Week 1</h4>
 
-The main feature of Erlang that discussed in the second course was the concurrency in Erlang. In this section we were introduced with the concept of message passing. The only way a process could interact with another process is through this message passing. This message passing can be synchronous or asynchronous. In Erlang both concurrency and parallelism can be acheived. On a single processing element, the concurrent process time share([more][concurrency_my_notes]). We can spawn a process with the help of [spawn][spawn_erlang_doc_link] primitive. On a [multicore processor][multicore_concurrency_my_notes] parallelism can be acheived. A process is a separate computation, running on its own space, time sharing with other [process][a_whole_lot_info_on_process].
+The main feature of Erlang that discussed in the second course was the concurrency in Erlang. In this section we were introduced with the concept of message passing. The only way a process could interact with another process is through this message passing. This message passing can be synchronous or asynchronous.
+
+In Erlang both concurrency and parallelism can be acheived. On a single processing element, the concurrent process time share([more][concurrency_my_notes]). We can spawn a process with the help of [spawn][spawn_erlang_doc_link] primitive. On a [multicore processor][multicore_concurrency_my_notes] parallelism can be acheived. A process is a separate computation, running on its own space, time sharing with other [process][a_whole_lot_info_on_process].
 
 Consider this 
 
@@ -240,7 +246,7 @@ Consider this
 
 {% endhighlight %}
 
-we can convert the above sequentialcode to concurrent like
+we can convert the above sequential code to concurrent like,
 
 {% highlight erlang %}
 
@@ -272,13 +278,14 @@ This can now be run from the shell
 12
 
 {% endhighlight %}
+
 Here we have spawned a process with the spawn primitive and send message {square, 5} to it. It will be send to the process's(<0.65.0>) mail box and from there it will be handled by the receive statement.
 
 ![process-mail-box](/assets/msg-passing-btwn-processes.png)
 
 If we send a message that wont match any pattern in the receive statement, those messages will reside in the mailbox which can be flushed with the help of [flush/0][flush_explained_in stackoverflow]. 
 
-We were introduced with a the idea of a frequency server, where a server is responsible for alloting frequency to clients. So the basic functionality of the server is like allocating frequency to the clients and deallocating the alloacted frequencies. This is implemented with the help of a pair of lists {Free, Allocated}, and a function to allocate frequencies and a function to deallocate frequencies. Both of these function return new states.  We were able to implement this like
+We were introduced with a the idea of a frequency server, where a server is responsible for alloting frequency to clients. So the basic functionality of the server is like allocating frequency to the clients and deallocating the alloacted frequencies. This is implemented with the help of a pair of lists {Free, Allocated}, and a function to allocate frequencies and a function to deallocate frequencies. Both of these function return new states.  We were able to implement this like,
 
 {% highlight erlang %}
 
@@ -300,7 +307,8 @@ ok.     %% new frequencies added to the list of free frequencies.
 <h4>Week 2</h4>
  
  Hot code Loading in Erlang is responsible for six Nine's avalability. That is Erlang production systems are available 99.9999 % of time. By this method we were able to add new freqeuncies to already running server. This implies that the production system was online during the upgradation. 
- A design philosophy in Erlang is "Let it fail", this means that if a process fail , let it fail. A process can either execute indefinetly, terminate normally or fail. When a process fails system integrity is destroyed, a message can be sent to a non existent process or will wait for a message from a failed process. So this has to be dealt. Linking is the method of linking process together, so that if a process fails all the process linked to it directly or indiretly will get an error signal(when this signal is received by a process , its default behaviour is self termination). But this can be avoided by converting this signal to message by trapping exit. This is done by setting the process_flag to true, 
+
+A design philosophy in Erlang is "Let it fail", this means that if a process fail , let it fail. A process can either execute indefinetly, terminate normally or fail. When a process fails system integrity is destroyed, a message can be sent to a non existent process or will wait for a message from a failed process. So this has to be dealt. Linking is the method of linking process together, so that if a process fails all the process linked to it directly or indiretly will get an error signal(when this signal is received by a process , its default behaviour is self termination). But this can be avoided by converting this signal to message by trapping exit. This is done by setting the process_flag to true, 
 
 {% highlight erlang %}
  process_flag(trap_exit,true)
@@ -324,8 +332,9 @@ Erlang also supports [Exception][exception_handling] handling, throw and catch. 
 
 <h4>Week 3</h4>
 
-In [multicore][multicore_concurrency_my_notes] systems Erlang acheives true parallelism. The processes are scheduled per core amd each of core has separate run queues. And because of this multiple process can be active simultaneously one on each core. In multicore sequential computations can be done in parallel. We were asked to scale the frequency server with two servers each of them handling half of the frequencies. We were able to implement this by creating a routing process which checks which server  has less load at that particular time and that server will handle the freqeuncy allocation request. 
+In [multicore][multicore_concurrency_my_notes] systems Erlang acheives true parallelism. The processes are scheduled per core amd each of core has separate run queues. And because of this multiple process can be active simultaneously one on each core. In multicore sequential computations can be done in parallel. We were asked to scale the frequency server with two servers each of them handling half of the frequencies. We were able to implement this by creating a routing process which checks which server  has less load at that particular time and that server will handle the freqeuncy allocation request.
 
+[more on multicore erlang][multicore_concurrency_my_notes]
 
 
 
