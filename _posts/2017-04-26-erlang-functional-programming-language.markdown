@@ -2,6 +2,7 @@
 title: "Erlang: My First functional programming Language"
 date: "2017-04-26 11:34:13"
 categories: [erlang]
+tags: [erlang]
 ---
 
 Erlang is a general purpose, concurrent functional programming language.I have attended two online courses from futurelearn[futurelearn_link]. The first course mainly focussed on the basic of the Erlang Language and the second course was into concurrent programming in Erlang. The Erland Language is approx 30years old and getting popularity these days due to its wide usage in concurrent environment. The Erlang was orginally designed for improving the development in telephony applications, where thery have to handle a lot of active connections at the same time. Another problem that lead to the development of Erlang is the need for availability and fault tolerance. By 1988 Erlang proved that it was suitable for telephony applications. In 1992 the work for erlang virtual machine BEAM was started( earlier versions of erlang was implemented in Prolog which was found slower hence BEAM). In 1998 Ericsson announced they were able to acheive high availability of nine 9's using Erlang circuit switched digital telephone exhanges manufactured by Ericsson.
@@ -26,6 +27,7 @@ With all this in mind lets move forward and allow me to write the challenges fac
 <h3>Course 1: Basic Programming In Erlang.</h3>
 
 <h4>Week 1:</h4>
+
   The first week of the course was mainly focussed on Erlang basics. One of the interesting aspect of Erlang that I came to know is the Pattern Matching. In Erlang variables are bind to values using pattern matching, uses single assignment. For example 
 
 ```erlang
@@ -53,10 +55,11 @@ is_zero(0)->
  true;
 is_zero(X)->
  false.
-
-```
-    
+ 
+ ```
+ 
     The function is_zero checks whether a given value is zero or not. If first clause holds we will get true else false. The clauses are separated by a semi-colon(;) and the final clause have a period(.) at the end. We have a module name isZero and a export list. In export list is_zero/1 says that is_zero is a function which will take a single argument. Every  function should be exported to use outside the module. The function vcan be executed after compiling the file isZero.erl(same as the module name) as shown below. This function in action,
+
 
 ```erlang
     
@@ -66,35 +69,37 @@ is_zero(X)->
 true
 3> isZero:is_zero(3).
 false
-    
 ```
 
     Recursion
       Another different thing I saw in Erlang was that there is no explicit control structures like for , while loops etc. We have to attain looping with recursion alone. An example of factorial problem,
 
-    ```erlang
+```erlang
     
-    fact(0)->
-     1;
-    fact(N)->
-     fact(N-1)*N.
+fact(0)->
+    1;
+fact(N)->
+    fact(N-1)*N.
 
-    ```  
-    we can implement this with Tail Recursion as
-
-    ```erlang
+``` 
+we can implement this with Tail Recursion as
 
 
-    fact(N)->
-       fac(N,1).
 
-    fac(0, Acc)->
-        Acc;
-    fac(N, Acc) when N > 0 ->
-        fac(N-1, Acc*N).
+```erlang
 
-    ```
-    Difference between Recursion & Tail Recursion [go_here][learn_you_some_erlang_link_recursion]. This Article explains tail recursion in a fantastic way.
+fact(N)->
+    fac(N,1).
+
+fac(0, Acc)->
+    Acc;
+fac(N, Acc) when N > 0 ->
+    fac(N-1, Acc*N).
+
+```
+
+
+   Difference between Recursion & Tail Recursion [go_here][learn_you_some_erlang_link_recursion]. This Article explains tail recursion in a fantastic way.
     
     A while loop implementation:
 
@@ -106,16 +111,16 @@ false
     }
     ```
     we can implement the same with Erlang like,
-
-   ```erlang
+```erlang
 
     while_loop(N) when N > 0 ->
       io:format("~p~n",[N]),
       while_loop(N-1).
 
-   ```
+```
 	
 <h4>Week 2</h4>
+
    Second week on the course was about Lists. List is a collection of Items, where you can mix more than one [data types][erlang_doc_datatypes_link].
    Ex: [1,2,3,4,5],
        ["string",atom,1,[1,2,3],{tuple, 1}]
@@ -123,7 +128,7 @@ false
 
    We can match a list like this
 
-   ```erlang
+```erlang
     
    Eshell V8.2  (abort with ^G)
 
@@ -144,7 +149,7 @@ false
    8> Ms.          %% and the rest.
    [3,4,5]
 
-   ```
+```
    [more on lists][erlang_doc_man_lists]. 
 
 
@@ -180,21 +185,24 @@ false
    3> Result = lists:foldl(Fun, 0, List). %% foldl(Function, Acc0, List)
    15
    
-   ```
+```
    The foldl/3 function takes a function Fn , Acc0 and a list. Fun(Elem, AccIn) on successive elements A of List, starting with AccIn == Acc0. Fun/2 must return a new accumulator, which is passed to the next call. The function returns the final value of the accumulator. Acc0 is returned if the list is empty.
 
 ```erlang
-   Eshell V8.2  (abort with ^G)
-  
-   1> List =[1,2,3,4,5].
-   [1,2,3,4,5]
-   2> Fun = fun(X) -> X*X end.
-   #Fun<erl_eval.6.52032458>
-   3> Result = lists:map(Fun, List).
-   [1,4,9,16,25]
 
-   ```
-   The lists:map/2 function maps each element. The above example find the square of all elements in a list. 
+Eshell V8.2  (abort with ^G)
+  
+1> List =[1,2,3,4,5].
+[1,2,3,4,5]
+2> Fun = fun(X) -> X*X end.
+#Fun<erl_eval.6.52032458>
+3> Result = lists:map(Fun, List).
+[1,4,9,16,25]
+
+```
+
+
+The lists:map/2 function maps each element. The above example find the square of all elements in a list. 
 
    ```erlang
 
