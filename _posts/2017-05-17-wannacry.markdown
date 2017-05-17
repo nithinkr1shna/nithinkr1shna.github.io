@@ -14,12 +14,13 @@ This wannacry ransomware uses the [EternalBlue][eternal-blue-wiki] exploit gener
 The Wannacry Ransoms starts at $300 in [Bitcoin][bitcoin-link-wiki].This typically arrives as a Dropper Trojan that contains the exploit kit and the ransomware itself. This Dropper attempts to connect to some remote servers to download the ransomware.
 
 <h4>More useful Links</h4>
-<ul>
-  <li> [RansomWare: Article from Spyware Website]</li>[from-spyware]
-  <li> [RansomWare: Article from The wire][from_the_wire]</li>
-  <li> [Precautions: Article from Microsoft Support-Disable smbv][disable-smbv]</li>
+  [RansomWare: Article from Spyware Website][from-spyware]
+  
+  [RansomWare: Article from The wire][from_the_wire]
+  
+  [Precautions: Article from Microsoft Support-Disable smbv][disable-smbv]
 
-</ul>
+
 
 
 [disable-smbv]: https://support.microsoft.com/en-in/help/2696547/how-to-enable-and-disable-smbv1,-smbv2,-and-smbv3-in-windows-vista,-windows-server-2008,-windows-7,-windows-server-2008-r2,-windows-8,-and-windows-server-2012
