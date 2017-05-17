@@ -22,17 +22,17 @@ The Wannacry Ransoms starts at $300 in [Bitcoin][bitcoin-link-wiki].This typical
 </ul>
 
 
-[disable-smbv]: https://support.microsoft.com/en-in/help/2696547/how-to-enable-and-disable-smbv1,-smbv2,-and-smbv3-in-windows-vista,-windows-server-2008,-windows-7,-windows-server-2008-r2,-windows-8,-and-windows-server-2012
-[from-spyware]: http://www.2-spyware.com/remove-wannacry-ransomware-virus.html
-[from-the-wire]: https://thewire.in/136128/north-korea-wannacry-ransomware-link/
-[bitcoin-link-wiki]: https://en.wikipedia.org/wiki/Bitcoin
-[eternal-blue-wiki]: https://en.wikipedia.org/wiki/EternalBlue
-[nsa-wiki]: https://en.wikipedia.org/wiki/National_Security_Agency
-[microsoft-wiki]: https://en.wikipedia.org/wiki/Microsoft
-[smb-wiki]: https://en.wikipedia.org/wiki/Server_Message_Block
-[shadow-brokers-wiki]: https://en.wikipedia.org/wiki/The_Shadow_Brokers
-[lazarus-wiki]: https://en.wikipedia.org/wiki/Lazarus_Group
-[microsoft-bulletin]: https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+[disable-smbv]:  https://support.microsoft.com/en-in/help/2696547/how-to-enable-and-disable-smbv1,-smbv2,-and-smbv3-in-windows-vista,-windows-server-2008,-windows-7,-windows-server-2008-r2,-windows-8,-and-windows-server-2012
+[from-spyware]:  http://www.2-spyware.com/remove-wannacry-ransomware-virus.html
+[from-the-wire]:   https://thewire.in/136128/north-korea-wannacry-ransomware-link/
+[bitcoin-link-wiki]:  https://en.wikipedia.org/wiki/Bitcoin
+[eternal-blue-wiki]:  https://en.wikipedia.org/wiki/EternalBlue
+[nsa-wiki]:  https://en.wikipedia.org/wiki/National_Security_Agency
+[microsoft-wiki]:  https://en.wikipedia.org/wiki/Microsoft
+[smb-wiki]:  https://en.wikipedia.org/wiki/Server_Message_Block
+[shadow-brokers-wiki]:  https://en.wikipedia.org/wiki/The_Shadow_Brokers
+[lazarus-wiki]:  https://en.wikipedia.org/wiki/Lazarus_Group
+[microsoft-bulletin]:  https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
 
 
 
