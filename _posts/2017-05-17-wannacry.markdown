@@ -14,6 +14,8 @@ This wannacry ransomware uses the [EternalBlue][eternal-blue-wiki] exploit gener
 The Wannacry Ransoms starts at $300 in [Bitcoin][bitcoin-link-wiki].This typically arrives as a Dropper Trojan that contains the exploit kit and the ransomware itself. This Dropper attempts to connect to some remote servers to download the ransomware.
 
 <h4>More useful Links</h4>
+
+
   [RansomWare: Article from Spyware Website][from-spyware]
   
   [RansomWare: Article from The wire][from_the_wire]
