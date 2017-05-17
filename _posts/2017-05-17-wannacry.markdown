@@ -15,7 +15,7 @@ The Wannacry Ransoms starts at $300 in [Bitcoin][bitcoin-link-wiki].This typical
 
 <h4>More useful Links</h4>
 <ul>
-  <li> [RansomWare: Article from Spyware Website][from-spyware]</li>
+  <li> [RansomWare: Article from Spyware Website]</li>[from-spyware]
   <li> [RansomWare: Article from The wire][from_the_wire]</li>
   <li> [Precautions: Article from Microsoft Support-Disable smbv][disable-smbv]</li>
 
