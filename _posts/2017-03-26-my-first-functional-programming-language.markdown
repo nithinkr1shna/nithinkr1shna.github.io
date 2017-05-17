@@ -60,7 +60,7 @@ fact(5)->
 
 To execute a Erlang program we have the save this code in a file, say fact.erl(.erl for erlang). Next in the file we have to specify the name of the module, and should write a export list. For this example, this would be like,
 
-{% highklight erlang %}
+{% highlight erlang %}
 -module(fact). 
 -export([fact/1]).
 
