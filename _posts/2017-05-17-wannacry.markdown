@@ -22,7 +22,8 @@ The Wannacry Ransoms starts at $300 in [Bitcoin][bitcoin-link-wiki].This typical
 </ul>
 
 
-[disable-smbv]:  https://support.microsoft.com/en-in/help/2696547/how-to-enable-and-disable-smbv1,-smbv2,-and-smbv3-in-windows-vista,-windows-server-2008,-windows-7,-windows-server-2008-r2,-windows-8,-and-windows-server-2012
+
+
 [from-spyware]:  http://www.2-spyware.com/remove-wannacry-ransomware-virus.html
 [from_the_wire]:   https://thewire.in/136128/north-korea-wannacry-ransomware-link/
 [bitcoin-link-wiki]:  https://en.wikipedia.org/wiki/Bitcoin
