@@ -1,7 +1,7 @@
 # Site settings
 title: Nithin Krishna
 description: 'My Simple Blog'
-baseurl: ''
+baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
