@@ -1,1 +1,1 @@
-A Simple Blog
+[My tech Blog](https://nitkna.github.io/) 
