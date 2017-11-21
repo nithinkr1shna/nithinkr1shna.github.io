@@ -1233,7 +1233,9 @@ hr {
 	margin-bottom: .2em; }
 
 .panel-cover__description {
-	margin: 0 30px; }
+	margin: 0 30px; 
+        font-style: italic;
+        font-size: 14px;}
 
 .panel-cover__divider {
 	width: 50%;
